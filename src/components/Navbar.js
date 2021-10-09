@@ -1,4 +1,5 @@
-import { Search } from '@material-ui/icons';
+import { Badge } from '@material-ui/core';
+import { Search, ShoppingCartOutlined } from '@material-ui/icons';
 import React from 'react'
 import styled from 'styled-components'
 
@@ -50,6 +51,12 @@ const Right = styled.div`
   justify-content: flex-end;
 `;
 
+const MenuItem = styled.div`
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 25px;
+`;
+
 export default function Navbar() {
     return (
         <Container>
@@ -58,11 +65,19 @@ export default function Navbar() {
                   <Language>Eng</Language>
                   <SearchContainer>
                     <Input/>
-                    <Search></Search>
+                    <Search style={{color: "gray", fontSize: 16 }}/>
                   </SearchContainer>
                 </Left>
-                <Center><Logo>MIA.</Logo></Center>
-                <Right>Right</Right>
+                <Center><Logo>VIVA STORE.</Logo></Center>
+                <Right>
+                  <MenuItem>Register</MenuItem>
+                  <MenuItem>Sign in</MenuItem>
+                  <MenuItem>
+                    <Badge badgeContent={4} color="primary" >
+                     <ShoppingCartOutlined/>
+                    </Badge>
+                  </MenuItem>
+                </Right>
             </Wrapper>
         </Container>
     )
