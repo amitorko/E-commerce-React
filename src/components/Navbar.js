@@ -21,11 +21,27 @@ const Left = styled.div`
 
 const Language = styled.span`
 font-size: 14px;
+cursor: pointer;
+`;
+
+const SearchContainer = styled.div`
+  border: 0.5px solid lightgray;
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+  padding: 5px;
+`;
+
+const Input = styled.input`
+  border: none;
 `;
 
 const Center = styled.div`
   flex: 1;
   text-align: center;
+`;
+const Logo = styled.h1`
+  font-weight: bold;
 `;
 const Right = styled.div`
   flex: 1;
@@ -41,11 +57,11 @@ export default function Navbar() {
                 <Left>
                   <Language>Eng</Language>
                   <SearchContainer>
-                    input
+                    <Input/>
                     <Search></Search>
                   </SearchContainer>
                 </Left>
-                <Center>Center</Center>
+                <Center><Logo>MIA.</Logo></Center>
                 <Right>Right</Right>
             </Wrapper>
         </Container>
